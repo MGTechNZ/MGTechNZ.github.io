@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MGTech | Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <script src="assets/js/theme-toggle.js" defer></script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+  <header class="p-4 flex justify-between items-center shadow-md dark:shadow-lg">
+    <h1 class="text-2xl font-bold">MGTech</h1>
+    <nav class="space-x-6">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="projects.html" class="hover:underline">Projects</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+      <a href="assets/docs/MGTech-CV.pdf" download class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Download CV</a>
+      <button id="toggle-theme" aria-label="Toggle Dark Mode" class="ml-4">🌓</button>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <h2 class="text-4xl font-bold mb-6 text-center">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project Card Example -->
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-5 hover:scale-[1.03] transition-transform cursor-pointer">
+        <h3 class="text-2xl font-semibold mb-2">Project One</h3>
+        <p class="mb-4">A web app built with React and Node.js to manage tasks efficiently.</p>
+        <a href="https://github.com/yourgithub/project-one" target="_blank" class="text-blue-600 hover:underline">GitHub Repo</a>
+      </div>
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-5 hover:scale-[1.03] transition-transform cursor-pointer">
+        <h3 class="text-2xl font-semibold mb-2">Project Two</h3>
+        <p class="mb-4">E-commerce site featuring secure payments and responsive design.</p>
+        <a href="https://github.com/yourgithub/project-two" target="_blank" class="text-blue-600 hover:underline">GitHub Repo</a>
+      </div>
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-5 hover:scale-[1.03] transition-transform cursor-pointer">
+        <h3 class="text-2xl font-semibold mb-2">Project Three</h3>
+        <p class="mb-4">Mobile app built with React Native for fitness tracking.</p>
+        <a href="https://github.com/yourgithub/project-three" target="_blank" class="text-blue-600 hover:underline">GitHub Repo</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center p-6 border-t mt-12 dark:border-gray-700">
+    &copy; 2025 MGTech — All rights reserved
+  </footer>
+</body>
+</html>
