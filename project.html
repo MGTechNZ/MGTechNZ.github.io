@@ -1,50 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MGTech | Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="assets/images/favicon.ico" />
-  <script src="assets/js/theme-toggle.js" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .nav-link {
+      @apply uppercase font-semibold tracking-widest text-white transition-all duration-300;
+    }
+    .nav-link:hover {
+      color: #FBBF24;
+      text-shadow: 0 0 10px #FBBF24;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #2563EB 0%, #06B6D4 100%);
+      @apply text-white font-bold px-8 py-3 rounded-xl shadow-lg transition-transform duration-300;
+    }
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #06B6D4;
+    }
+    #mobile-menu {
+      display: none;
+    }
+  </style>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
-  <header class="p-4 flex justify-between items-center shadow-md dark:shadow-lg">
-    <h1 class="text-2xl font-bold">MGTech</h1>
-    <nav class="space-x-6">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="about.html" class="hover:underline">About</a>
-      <a href="projects.html" class="hover:underline">Projects</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
-      <a href="assets/docs/MGTech-CV.pdf" download class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Download CV</a>
-      <button id="toggle-theme" aria-label="Toggle Dark Mode" class="ml-4">🌓</button>
+<body class="bg-gray-50 dark:bg-[#111827] transition-colors duration-700">
+  <header class="bg-gradient-to-r from-[#7C3AED] via-[#2563EB] to-[#06B6D4] shadow-lg sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <h1 class="text-white text-3xl font-extrabold tracking-widest">MGTech</h1>
+      <ul id="desktop-menu" class="hidden md:flex space-x-12">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link" aria-current="page">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="assets/docs/MGTech-CV.pdf" download class="btn-primary">Download CV</a></li>
+      </ul>
+      <button id="menu-toggle" aria-label="Toggle menu" class="md:hidden text-white text-3xl">☰</button>
     </nav>
+    <ul id="mobile-menu" class="bg-gradient-to-r from-[#7C3AED] via-[#2563EB] to-[#06B6D4] flex flex-col items-center space-y-6 py-8">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="assets/docs/MGTech-CV.pdf" download class="btn-primary px-10">Download CV</a></li>
+    </ul>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6">
-    <h2 class="text-4xl font-bold mb-6 text-center">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Project Card Example -->
-      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-5 hover:scale-[1.03] transition-transform cursor-pointer">
-        <h3 class="text-2xl font-semibold mb-2">Project One</h3>
-        <p class="mb-4">A web app built with React and Node.js to manage tasks efficiently.</p>
-        <a href="https://github.com/yourgithub/project-one" target="_blank" class="text-blue-600 hover:underline">GitHub Repo</a>
-      </div>
-      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-5 hover:scale-[1.03] transition-transform cursor-pointer">
-        <h3 class="text-2xl font-semibold mb-2">Project Two</h3>
-        <p class="mb-4">E-commerce site featuring secure payments and responsive design.</p>
-        <a href="https://github.com/yourgithub/project-two" target="_blank" class="text-blue-600 hover:underline">GitHub Repo</a>
-      </div>
-      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-5 hover:scale-[1.03] transition-transform cursor-pointer">
-        <h3 class="text-2xl font-semibold mb-2">Project Three</h3>
-        <p class="mb-4">Mobile app built with React Native for fitness tracking.</p>
-        <a href="https://github.com/yourgithub/project-three" target="_blank" class="text-blue-600 hover:underline">GitHub Repo</a>
-      </div>
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <h2 data-aos="fade-down" class="text-5xl font-extrabold text-[#7C3AED] mb-12 text-center">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <article data-aos="fade-up" class="bg-gradient-to-tr from-[#06B6D4] to-[#7C3AED] rounded-3xl shadow-lg p-8 text-white hover:scale-105 transition-transform cursor-pointer">
+        <h3 class="text-3xl font-extrabold mb-3 drop-shadow-md">Task Manager App</h3>
+        <p class="mb-5 text-lg font-semibold drop-shadow-md">A React & Node.js web app to manage and prioritize tasks with deadlines and notifications.</p>
+        <a href="https://github.com/yourgithub/task-manager" target="_blank" class="underline font-semibold hover:text-yellow-400">GitHub Repo</a>
+      </article>
+
+      <article data-aos="fade-up" data-aos-delay="150" class="bg-gradient-to-tr from-[#2563EB] to-[#06B6D4] rounded-3xl shadow-lg p-8 text-white hover:scale-105 transition-transform cursor-pointer">
+        <h3 class="text-3xl font-extrabold mb-3 drop-shadow-md">Portfolio Website</h3>
+        <p class="mb-5 text-lg font-semibold drop-shadow-md">My personal portfolio showcasing projects, skills, and contact info, built with React and Tailwind CSS.</p>
+        <a href="https://yourportfolio.com" target="_blank" class="underline font-semibold hover:text-yellow-400">Live Demo</a>
+      </article>
+
+      <article data-aos="fade-up" data-aos-delay="300" class="bg-gradient-to-tr from-[#7C3AED] to-[#2563EB] rounded-3xl shadow-lg p-8 text-white hover:scale-105 transition-transform cursor-pointer">
+        <h3 class="text-3xl font-extrabold mb-3 drop-shadow-md">E-commerce Backend</h3>
+        <p class="mb-5 text-lg font-semibold drop-shadow-md">REST API built with Node.js, Express & MongoDB for an online store with user authentication and payment integration.</p>
+        <a href="https://github.com/yourgithub/ecommerce-api" target="_blank" class="underline font-semibold hover:text-yellow-400">GitHub Repo</a>
+      </article>
     </div>
   </main>
 
-  <footer class="text-center p-6 border-t mt-12 dark:border-gray-700">
-    &copy; 2025 MGTech — All rights reserved
+  <footer class="mt-20 p-8 text-center text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
+    &copy; 2025 MGTech — Designed with ❤️ and bold colors
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      if(mobileMenu.style.display === 'flex') {
+        mobileMenu.style.display = 'none';
+      } else {
+        mobileMenu.style.display = 'flex';
+      }
+    });
+  </script>
 </body>
 </html>
