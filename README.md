@@ -1,2 +1,3 @@
-# MGTechNZ.github.io
-webpage
+# MGTech Website
+
+This is your updated portfolio site. Host using GitHub Pages.
