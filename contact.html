@@ -18,9 +18,11 @@
 <!-- NAVBAR -->
 <header class="bg-green-600 sticky top-0 z-50 shadow-md">
   <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">MGTech</h1>
+    <h1 class="text-2xl font-bold">
+      <a href="index.html" class="hover:text-green-200">MGTech</a>
+    </h1>
     <ul class="hidden md:flex space-x-6 font-semibold text-white">
-      <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+      <!-- Home link removed -->
       <li><a href="about.html" class="hover:text-green-200">About</a></li>
       <li><a href="projects.html" class="hover:text-green-200">Projects</a></li>
       <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
@@ -31,7 +33,7 @@
     </div>
   </nav>
   <div id="mobile-menu" class="md:hidden hidden flex-col bg-green-700 text-white text-lg space-y-4 px-6 py-4">
-    <a href="index.html" class="hover:text-green-200">Home</a>
+    <!-- Home link removed -->
     <a href="about.html" class="hover:text-green-200">About</a>
     <a href="projects.html" class="hover:text-green-200">Projects</a>
     <a href="contact.html" class="hover:text-green-200">Contact</a>
@@ -39,13 +41,22 @@
 </header>
 
 <!-- MAIN -->
-<main class="max-w-4xl mx-auto px-6 py-20">
+<main class="max-w-3xl mx-auto px-6 py-20">
   <h2 class="text-4xl font-bold mb-12 text-green-400 text-center" data-aos="fade-down">Get in Touch</h2>
-  <form action="mailto:your.email@example.com" method="POST" enctype="text/plain" class="space-y-8" data-aos="fade-up">
-    <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 bg-gray-900 border border-green-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-400" />
-    <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 bg-gray-900 border border-green-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-400" />
-    <textarea name="message" rows="6" placeholder="Your Message" required class="w-full px-4 py-3 bg-gray-900 border border-green-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
-    <button type="submit" class="bg-green-500 hover:bg-green-400 text-black font-bold px-6 py-3 rounded w-full md:w-auto transition">Send Message</button>
+  <form action="mailto:your.email@example.com" method="POST" enctype="text/plain" class="space-y-6" data-aos="fade-up">
+    <div>
+      <label for="name" class="block mb-2 font-semibold">Name</label>
+      <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+    <div>
+      <label for="email" class="block mb-2 font-semibold">Email</label>
+      <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+    <div>
+      <label for="message" class="block mb-2 font-semibold">Message</label>
+      <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+    </div>
+    <button type="submit" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded font-bold transition">Send Message</button>
   </form>
 </main>
 
