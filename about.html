@@ -1,94 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="About McGregor James - Full-stack Developer" />
+  <meta name="description" content="MGTech | About McGregor" />
   <title>MGTech | About</title>
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white font-poppins">
+<body class="bg-black text-white">
 
 <!-- NAVBAR -->
-<header class="navbar shadow-lg">
-  <div class="container">
-    <a href="index.html" class="logo-link" aria-label="MGTech Home">
+<header class="navbar sticky top-0 z-50 shadow-md">
+  <div class="container flex justify-between items-center px-6 py-4 bg-green-600">
+    <a href="index.html" class="logo-link">
       <img src="assets/docs/MGTechLogo.jpg.png" alt="MGTech Logo" class="logo-img" />
     </a>
     <nav>
-      <ul class="nav-links" role="menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link active">About</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <ul class="nav-links hidden md:flex space-x-6 font-semibold text-white">
+        <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+        <li><a href="about.html" class="hover:text-green-200">About</a></li>
+        <li><a href="projects.html" class="hover:text-green-200">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
       </ul>
-      <div id="burger" class="burger" aria-label="Toggle menu" role="button" tabindex="0">&#9776;</div>
+      <div id="burger" class="burger md:hidden cursor-pointer text-white text-3xl">&#9776;</div>
     </nav>
   </div>
 
-  <div id="mobile-menu" class="mobile-menu" role="menu">
-    <a href="index.html" class="mobile-nav-link">Home</a>
-    <a href="about.html" class="mobile-nav-link active">About</a>
-    <a href="projects.html" class="mobile-nav-link">Projects</a>
-    <a href="contact.html" class="mobile-nav-link">Contact</a>
+  <div id="mobile-menu" class="mobile-menu hidden bg-green-700 text-white text-lg flex flex-col px-6 py-4 space-y-4">
+    <a href="index.html" class="hover:text-green-200">Home</a>
+    <a href="about.html" class="hover:text-green-200">About</a>
+    <a href="projects.html" class="hover:text-green-200">Projects</a>
+    <a href="contact.html" class="hover:text-green-200">Contact</a>
   </div>
 </header>
 
-<!-- ABOUT HERO -->
-<section id="about-hero" class="text-center py-28 px-6 max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
-  <h1 class="text-5xl font-extrabold mb-6 text-gradient-green">About Me</h1>
+<!-- ABOUT CONTENT -->
+<main class="max-w-6xl mx-auto px-6 py-20" data-aos="fade-up">
+  <h2 class="text-4xl font-extrabold mb-6 text-green-400 text-center">About Me</h2>
   <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-    I’m McGregor James, a passionate full-stack developer specializing in building fast, scalable, and modern web applications. With a background in Applied IT and years of hands-on experience, I focus on clean code, intuitive UI, and seamless user experiences.
+    Hi! I'm McGregor, a passionate full-stack developer with expertise in building scalable web applications, creating sleek user interfaces, and optimizing backend performance. I love solving complex problems and continuously learning new technologies.
   </p>
-</section>
-
-<!-- SKILLS & EXPERIENCE -->
-<section class="bg-gray-900 py-20 px-6 max-w-6xl mx-auto" data-aos="fade-right" data-aos-duration="1000">
-  <div class="grid md:grid-cols-2 gap-16 items-center">
-    <div>
-      <h2 class="text-4xl font-bold text-green-400 mb-6 tracking-wide">My Journey</h2>
-      <p class="text-white text-lg leading-relaxed mb-4">
-        Starting at age 14 building computers, I quickly developed a passion for programming and problem solving. My experience spans frontend, backend, and design, using modern tools like React, Node.js, and Tailwind CSS.
-      </p>
-      <p class="text-white text-lg leading-relaxed">
-        I believe in continuous learning and always strive to deliver top quality software that exceeds client expectations.
-      </p>
-    </div>
-    <div>
-      <img src="assets/docs/profile-photo.jpg" alt="McGregor James" class="rounded-lg shadow-lg hover:scale-105 transition-transform" />
-    </div>
-  </div>
-</section>
-
-<!-- TECH STACK -->
-<section class="py-20 px-6 max-w-6xl mx-auto" data-aos="fade-left" data-aos-duration="1000">
-  <h2 class="text-4xl font-bold text-green-400 mb-12 text-center tracking-wide">Tech Stack & Tools</h2>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-white text-center font-semibold text-lg">
-    <div class="tech-card" data-aos="zoom-in" data-aos-delay="100">JavaScript / TypeScript</div>
-    <div class="tech-card" data-aos="zoom-in" data-aos-delay="200">React / Next.js</div>
-    <div class="tech-card" data-aos="zoom-in" data-aos-delay="300">Node.js / Express</div>
-    <div class="tech-card" data-aos="zoom-in" data-aos-delay="400">MongoDB / MySQL</div>
-    <div class="tech-card" data-aos="zoom-in" data-aos-delay="500">Git / GitHub</div>
-    <div class="tech-card" data-aos="zoom-in" data-aos-delay="600">Tailwind CSS</div>
-    <div class="tech-card" data-aos="zoom-in" data-aos-delay="700">Figma / UI Design</div>
-    <div class="tech-card" data-aos="zoom-in" data-aos-delay="800">Docker / CI/CD</div>
-  </div>
-</section>
-
-<!-- CONTACT CTA -->
-<section class="py-16 px-6 max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
-  <h3 class="text-3xl font-bold text-green-300 mb-6">Want to get in touch?</h3>
-  <a href="contact.html" class="btn-primary inline-block px-10 py-3 font-semibold">Contact Me</a>
-</section>
+  <p class="mt-6 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+    Outside of coding, I enjoy exploring UI/UX design trends, working on personal projects, and sharing knowledge with the developer community.
+  </p>
+</main>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 <script>
-  AOS.init({ once: true });
+  AOS.init();
 </script>
+
+<script>
+  // Mobile menu toggle script
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 </body>
 </html>
+
 
