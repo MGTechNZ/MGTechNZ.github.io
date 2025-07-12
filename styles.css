@@ -16,6 +16,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,18 +66,18 @@ body {
 .nav-links a {
   text-decoration: none;
   color: white;
-  transition: color 0.3s ease;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #9ae6b4;
 }
 
-/* Burger icon */
+/* Burger Icon */
 .burger {
   display: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
   user-select: none;
   cursor: pointer;
@@ -87,9 +88,9 @@ body {
   display: none;
   flex-direction: column;
   background-color: #16a34a;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   position: absolute;
-  top: 80px;
+  top: 80px; /* same as navbar height */
   right: 0;
   width: 100%;
   font-weight: 600;
@@ -97,25 +98,69 @@ body {
   transition: all 0.3s ease;
 }
 
-.mobile-menu.hidden {
-  display: none;
+.mobile-menu.active {
+  display: flex;
 }
 
-.mobile-menu a {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+/* Forms */
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
 }
 
-.mobile-menu a:last-child {
-  border-bottom: none;
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #68d391;
+  border-color: #68d391;
 }
 
-.mobile-menu a:hover {
-  color: #9ae6b4;
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #16a34a;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-/* Responsive */
+button:hover {
+  background-color: #15803d;
+}
+
+/* Counter animation */
+.counter {
+  animation: countUp 2s forwards;
+}
+
+@keyframes countUp {
+  0% {
+    counter-reset: count 0;
+  }
+  100% {
+    counter-reset: count var(--target);
+  }
+}
+
+/* Smooth transition for hover scaling */
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+/* Responsive spacing */
 @media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .nav-links {
     display: none;
   }
