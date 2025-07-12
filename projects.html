@@ -4,31 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MGTech | Projects</title>
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="icon" href="./assets/favicon.ico" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta name="description" content="McGregor James' Projects" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+<!-- NAVBAR -->
 <header>
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Primary Navigation">
     <a href="index.html" class="logo-glow" data-text="MGTECH">MGTech</a>
 
-    <!-- Hamburger icon -->
     <button id="menu-btn" class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <!-- Mobile menu (hidden by default) -->
-    <div id="mobile-menu" class="mobile-menu" hidden>
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true" hidden>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Desktop nav (visible on wider screens) -->
     <div class="nav-links">
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -39,48 +37,44 @@
   </nav>
 </header>
 
+<!-- MAIN CONTENT -->
+<main class="max-w-7xl mx-auto px-6 py-20" style="color:#d1d5db;">
+  <h2 class="text-4xl font-extrabold mb-12 text-green-400 text-center">Projects</h2>
 
-<main>
-  <section data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" style="max-width: 900px; margin: 3rem auto;">
-    <h2 class="section-title">My Projects</h2>
-    <p style="text-align:center; margin-bottom: 2rem;">A selection of my recent work showcasing my development skills and creativity.</p>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <article class="card" data-aos="zoom-in" data-aos-delay="300">
-        <h3>PixelForgePCs</h3>
-        <p>A comprehensive PC building website with a live configurator to select parts for gaming, business, and more.</p>
-        <a href="https://pixelforgepcs.example.com" target="_blank" class="button" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card" data-aos="zoom-in" data-aos-delay="500">
-        <h3>Te Reo Māori Learning App</h3>
-        <p>Interactive mobile and web app designed to teach beginners Te Reo Māori through gamified lessons and flashcards.</p>
-        <a href="https://te-reo-maori.app" target="_blank" class="button" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card" data-aos="zoom-in" data-aos-delay="700">
-        <h3>Low Rider Cartel Website</h3>
-        <p>A stylish portfolio site for car culture enthusiasts with a modern responsive design.</p>
-        <a href="https://lowridercartel.example.com" target="_blank" class="button" rel="noopener">View Project</a>
-      </article>
-
-      <article class="card" data-aos="zoom-in" data-aos-delay="900">
-        <h3>Minecraft Cosmetics Mod</h3>
-        <p>A Fabric-based client-side mod that allows players to customize cosmetics with a 3D GUI interface.</p>
-        <a href="https://github.com/mcgregorfarley/minecraft-cosmetics" target="_blank" class="button" rel="noopener">View Project</a>
-      </article>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+    <!-- Project Card -->
+    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer">
+      <img src="https://via.placeholder.com/400x250?text=Task+Manager+App" alt="Task Manager App" class="rounded-md mb-4" />
+      <h3 class="text-xl font-semibold text-green-200 mb-2">Task Manager App</h3>
+      <p>A React & Node.js app with deadlines, user authentication, and real-time updates.</p>
+      <div class="mt-4 flex space-x-4">
+        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
+        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
+      </div>
     </div>
-  </section>
+
+    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer">
+      <img src="https://via.placeholder.com/400x250?text=Portfolio+Website" alt="Portfolio Website" class="rounded-md mb-4" />
+      <h3 class="text-xl font-semibold text-green-200 mb-2">Portfolio Website</h3>
+      <p>Built with Tailwind CSS and deployed via GitHub Pages.</p>
+      <div class="mt-4 flex space-x-4">
+        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
+        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer">
+      <img src="https://via.placeholder.com/400x250?text=E-Commerce+Backend" alt="E-Commerce Backend" class="rounded-md mb-4" />
+      <h3 class="text-xl font-semibold text-green-200 mb-2">E-Commerce Backend</h3>
+      <p>REST API with Express, JWT authentication, and Stripe payment integration.</p>
+      <div class="mt-4 flex space-x-4">
+        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
+        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
+      </div>
+    </div>
+  </div>
 </main>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="./script.js"></script>
-<script>
-  AOS.init({
-    easing: 'ease-in-out',
-    once: true,
-    duration: 1200,
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
