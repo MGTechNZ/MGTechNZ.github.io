@@ -44,7 +44,8 @@ body {
 }
 
 .logo-img {
-  height: 60px; /* Fit logo within navbar */
+  height: 60px;
+  max-width: 200px;
   width: auto;
   filter: drop-shadow(0 0 8px #00ff00);
   transition: filter 0.3s ease;
@@ -148,6 +149,6 @@ button {
 
   .logo-img {
     height: 50px;
+    max-width: 150px;
   }
 }
-
