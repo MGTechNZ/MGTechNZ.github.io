@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MGTech | Projects</title>
-  <meta name="description" content="McGregor James' Projects" />
+  <meta name="description" content="Portfolio Projects" />
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <link rel="stylesheet" href="styles.css" />
@@ -14,10 +14,11 @@
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <div class="container flex justify-between items-center px-6 py-4 bg-green-600 sticky top-0 z-50 shadow-md">
+  <div class="container">
     <a href="index.html" class="logo-link">
       <img src="assets/docs/MGTechLogo.jpg.png" alt="MGTech Logo" class="logo-img" />
     </a>
+    <div id="burger" class="burger md:hidden text-white text-3xl">&#9776;</div>
     <nav>
       <ul class="nav-links hidden md:flex space-x-6 font-semibold text-white">
         <li><a href="index.html" class="hover:text-green-200">Home</a></li>
@@ -25,11 +26,9 @@
         <li><a href="projects.html" class="hover:text-green-200">Projects</a></li>
         <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
       </ul>
-      <div id="burger" class="burger md:hidden cursor-pointer text-white text-3xl">&#9776;</div>
     </nav>
   </div>
-
-  <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-green-700 text-white text-lg flex flex-col px-6 py-4 space-y-4">
+  <div id="mobile-menu" class="mobile-menu hidden md:hidden">
     <a href="index.html" class="hover:text-green-200">Home</a>
     <a href="about.html" class="hover:text-green-200">About</a>
     <a href="projects.html" class="hover:text-green-200">Projects</a>
@@ -37,41 +36,22 @@
   </div>
 </header>
 
-<!-- PROJECTS -->
-<main class="max-w-7xl mx-auto px-6 py-20">
+<main class="max-w-6xl mx-auto px-6 py-20">
   <h2 class="text-4xl font-extrabold mb-12 text-green-400 text-center" data-aos="fade-down">Projects</h2>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-    <!-- Project Card -->
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer" data-aos="fade-up">
-      <img src="https://via.placeholder.com/400x250?text=Task+Manager+App" alt="Task Manager App" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">Task Manager App</h3>
-      <p class="text-gray-300">A React & Node.js app with deadlines, user authentication, and real-time updates.</p>
+    <!-- Example Project -->
+    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform" data-aos="fade-up">
+      <img src="https://via.placeholder.com/400x250?text=Project+Image" alt="Project Image" class="rounded-md mb-4" />
+      <h3 class="text-xl font-semibold text-green-200 mb-2">Awesome Project</h3>
+      <p class="text-gray-300">Full-stack application built with React, Express, and MongoDB.</p>
       <div class="mt-4 flex space-x-4">
         <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
         <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
       </div>
     </div>
 
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-      <img src="https://via.placeholder.com/400x250?text=Portfolio+Website" alt="Portfolio Website" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">Portfolio Website</h3>
-      <p class="text-gray-300">Built with Tailwind CSS and deployed via GitHub Pages.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
-    </div>
-
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-      <img src="https://via.placeholder.com/400x250?text=E-Commerce+Backend" alt="E-Commerce Backend" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">E-Commerce Backend</h3>
-      <p class="text-gray-300">REST API with Express, JWT authentication, and Stripe payment integration.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
-    </div>
+    <!-- Duplicate for more projects -->
   </div>
 </main>
 
@@ -79,7 +59,19 @@
 <script src="script.js"></script>
 <script>
   AOS.init();
+  document.getElementById("burger").addEventListener("click", () => {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+    menu.classList.toggle("active");
+  });
+
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  });
 </script>
 </body>
 </html>
+
 
