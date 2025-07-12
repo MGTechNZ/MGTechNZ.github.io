@@ -26,14 +26,12 @@ body {
 /* Navbar */
 .navbar {
   background-color: #16a34a;
-  height: 80px;
-  width: 100%;
+  padding: 1rem;
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 1000;
   display: flex;
-  align-items: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
 }
 
 .logo-link {
@@ -43,8 +41,8 @@ body {
 }
 
 .logo-img {
-  height: 65px;
-  max-width: 220px;
+  height: 60px;
+  max-width: 200px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 0 12px rgba(0, 255, 0, 0.6));
@@ -56,62 +54,38 @@ body {
   transform: scale(1.05);
 }
 
-/* Nav links */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-  font-weight: 600;
-}
-
-.nav-links a:hover {
-  color: #9ae6b4;
-}
-
-/* Burger icon */
 .burger {
-  display: none;
+  display: block;
   font-size: 2rem;
   color: white;
   user-select: none;
   cursor: pointer;
 }
 
-/* Mobile Menu */
 .mobile-menu {
   display: none;
   flex-direction: column;
-  background-color: #16a34a;
+  background-color: #15803d;
   padding: 1rem;
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 100%;
-  font-weight: 600;
-  z-index: 9999;
-  animation: slideDown 0.3s ease forwards;
-  pointer-events: auto;
 }
 
 .mobile-menu.active {
   display: flex;
 }
 
-@keyframes slideDown {
-  0% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.mobile-menu a {
+  color: white;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mobile-menu a:hover {
+  color: #9ae6b4;
+}
+
+.content-section {
+  padding: 3rem;
 }
 
 /* Forms */
@@ -166,23 +140,3 @@ button:hover {
   transition: transform 0.3s ease;
 }
 
-/* Responsive spacing */
-@media (max-width: 768px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  .logo-img {
-    height: 50px;
-    max-width: 150px;
-  }
-}
