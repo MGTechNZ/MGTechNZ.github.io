@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="MGTech | About McGregor" />
   <title>MGTech | About</title>
+  <meta name="description" content="About McGregor James" />
   <link rel="icon" href="assets/favicon.ico" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white">
 
 <!-- NAVBAR -->
-<header class="navbar sticky top-0 z-50 shadow-md">
-  <div class="container flex justify-between items-center px-6 py-4 bg-green-600">
+<header class="navbar">
+  <div class="container flex justify-between items-center px-6 py-4 bg-green-600 sticky top-0 z-50 shadow-md">
     <a href="index.html" class="logo-link">
       <img src="assets/docs/MGTechLogo.jpg.png" alt="MGTech Logo" class="logo-img" />
     </a>
@@ -29,7 +29,7 @@
     </nav>
   </div>
 
-  <div id="mobile-menu" class="mobile-menu hidden bg-green-700 text-white text-lg flex flex-col px-6 py-4 space-y-4">
+  <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-green-700 text-white text-lg flex flex-col px-6 py-4 space-y-4">
     <a href="index.html" class="hover:text-green-200">Home</a>
     <a href="about.html" class="hover:text-green-200">About</a>
     <a href="projects.html" class="hover:text-green-200">Projects</a>
@@ -37,33 +37,22 @@
   </div>
 </header>
 
-<!-- ABOUT CONTENT -->
-<main class="max-w-6xl mx-auto px-6 py-20" data-aos="fade-up">
-  <h2 class="text-4xl font-extrabold mb-6 text-green-400 text-center">About Me</h2>
-  <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-    Hi! I'm McGregor, a passionate full-stack developer with expertise in building scalable web applications, creating sleek user interfaces, and optimizing backend performance. I love solving complex problems and continuously learning new technologies.
+<!-- ABOUT -->
+<section class="max-w-6xl mx-auto px-6 py-20" data-aos="fade-up">
+  <h2 class="text-4xl font-extrabold mb-8 text-green-400 text-center">About Me</h2>
+  <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto mb-6">
+    Hello! I’m McGregor, a passionate full-stack developer with experience in building modern, scalable, and responsive web applications. I love working with JavaScript, React, Node.js, and design tools like Figma. When I’m not coding, I enjoy learning new technologies, improving my skills, and helping clients achieve their digital goals.
   </p>
-  <p class="mt-6 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-    Outside of coding, I enjoy exploring UI/UX design trends, working on personal projects, and sharing knowledge with the developer community.
+  <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
+    My goal is to create beautiful and functional websites that offer a great user experience and solve real-world problems. I’m always eager to collaborate on exciting projects or provide tech consulting for your business.
   </p>
-</main>
+</section>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 <script>
   AOS.init();
 </script>
-
-<script>
-  // Mobile menu toggle script
-  const burger = document.getElementById('burger');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  burger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
 </body>
 </html>
 
