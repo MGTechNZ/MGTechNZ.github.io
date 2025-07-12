@@ -11,21 +11,34 @@
 <body>
 
 <header>
-  <nav>
+  <nav class="navbar">
     <a href="index.html" class="logo-glow" data-text="MGTECH">MGTech</a>
-    <div class="burger" id="menu-btn" aria-label="Toggle menu" role="button" tabindex="0">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="nav-links mobile-menu">
+
+    <!-- Hamburger icon -->
+    <button id="menu-btn" class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="mobile-menu" hidden>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </div>
+
+    <!-- Desktop nav (visible on wider screens) -->
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
     <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
   </nav>
 </header>
+
 
 <main>
   <section data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" style="max-width: 800px; margin: 3rem auto;">
