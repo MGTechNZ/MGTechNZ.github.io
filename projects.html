@@ -1,83 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="McGregor James' Projects" />
+  <meta name="description" content="MGTech | Projects Portfolio" />
   <title>MGTech | Projects</title>
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-black text-white">
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white font-poppins">
 
 <!-- NAVBAR -->
-<header class="navbar">
+<header class="navbar shadow-lg">
   <div class="container">
-    <a href="index.html" class="logo-link">
+    <a href="index.html" class="logo-link" aria-label="MGTech Home">
       <img src="assets/docs/MGTechLogo.jpg.png" alt="MGTech Logo" class="logo-img" />
     </a>
     <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <ul class="nav-links" role="menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-      <div id="burger" class="burger">&#9776;</div>
+      <div id="burger" class="burger" aria-label="Toggle menu" role="button" tabindex="0">&#9776;</div>
     </nav>
   </div>
 
-  <div id="mobile-menu" class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+  <div id="mobile-menu" class="mobile-menu" role="menu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="projects.html" class="mobile-nav-link active">Projects</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
   </div>
 </header>
 
-<!-- MAIN -->
-<main class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-4xl font-extrabold mb-12 text-green-400 text-center" data-aos="fade-down">Projects</h2>
+<!-- HERO -->
+<section class="text-center py-24 px-6 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+  <h1 class="text-5xl font-extrabold mb-6 text-gradient-green">Projects Portfolio</h1>
+  <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+    Explore my latest projects ranging from full-stack apps to APIs and web designs.
+  </p>
+</section>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-    <!-- Project Card -->
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer" data-aos="fade-up">
-      <img src="https://via.placeholder.com/400x250?text=Task+Manager+App" alt="Task Manager App" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">Task Manager App</h3>
-      <p class="text-gray-300">A React & Node.js app with deadlines, user authentication, and real-time updates.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
-    </div>
-
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-      <img src="https://via.placeholder.com/400x250?text=Portfolio+Website" alt="Portfolio Website" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">Portfolio Website</h3>
-      <p class="text-gray-300">Built with Tailwind CSS and deployed via GitHub Pages.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
-    </div>
-
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-      <img src="https://via.placeholder.com/400x250?text=E-Commerce+Backend" alt="E-Commerce Backend" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">E-Commerce Backend</h3>
-      <p class="text-gray-300">REST API with Express, JWT authentication, and Stripe payment integration.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
-    </div>
+<!-- FILTERS -->
+<section class="max-w-6xl mx-auto px-6 mb-12" data-aos="fade-in" data-aos-duration="1000">
+  <div class="flex justify-center gap-4 flex-wrap">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="backend">Backend</button>
+    <button class="filter-btn" data-filter="design">Design</button>
   </div>
-</main>
+</section>
+
+<!-- PROJECT GRID -->
+<section id="project-grid" class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 mb-20" aria-live="polite">
+  <article class="project-card frontend" data-aos="zoom-in" data-aos-delay="100" tabindex="0" role="article">
+    <img src="https://via.placeholder.com/400x250?text=Task+Manager+App" alt="Task Manager App" class="rounded-md mb-4 shadow-lg" />
+    <h3 class="text-xl font-semibold text-green-300 mb-2">Task Manager App</h3>
+    <p class="text-gray-300">A React & Node.js app with deadlines, user authentication, and real-time updates.</p>
+    <div class="mt-4 flex space-x-4">
+      <a href="#" class="text-green-400 hover:text-green-200 font-semibold" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="#" class="text-green-400 hover:text-green-200 font-semibold" target="_blank" rel="noopener noreferrer">Live Demo</a>
+    </div>
+  </article>
+
+  <article class="project-card design" data-aos="zoom-in" data-aos-delay="200" tabindex="0" role="article">
+    <img src="https://via.placeholder.com/400x250?text=Portfolio+Website" alt="Portfolio Website" class="rounded-md mb-4 shadow-lg" />
+    <h3 class="text-xl font-semibold text-green-300 mb-2">Portfolio Website</h3>
+    <p class="text-gray-300">Built with Tailwind CSS and deployed via GitHub Pages.</p>
+    <div class="mt-4 flex space-x-4">
+      <a href="#" class="text-green-400 hover:text-green-200 font-semibold" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="#" class="text-green-400 hover:text-green-200 font-semibold" target="_blank" rel="noopener noreferrer">Live Demo</a>
+    </div>
+  </article>
+
+  <article class="project-card backend" data-aos="zoom-in" data-aos-delay="300" tabindex="0" role="article">
+    <img src="https://via.placeholder.com/400x250?text=E-Commerce+Backend" alt="E-Commerce Backend" class="rounded-md mb-4 shadow-lg" />
+    <h3 class="text-xl font-semibold text-green-300 mb-2">E-Commerce Backend</h3>
+    <p class="text-gray-300">REST API with Express, JWT authentication, and Stripe payment integration.</p>
+    <div class="mt-4 flex space-x-4">
+      <a href="#" class="text-green-400 hover:text-green-200 font-semibold" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="#" class="text-green-400 hover:text-green-200 font-semibold" target="_blank" rel="noopener noreferrer">Live Demo</a>
+    </div>
+  </article>
+</section>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 <script>
-  AOS.init();
+  AOS.init({ once: true });
+
+  // Projects filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class on buttons
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+
+      projects.forEach(project => {
+        if (filter === 'all' || project.classList.contains(filter)) {
+          project.style.display = 'block';
+          project.setAttribute('aria-hidden', 'false');
+        } else {
+          project.style.display = 'none';
+          project.setAttribute('aria-hidden', 'true');
+        }
+      });
+    });
+  });
 </script>
 </body>
 </html>
