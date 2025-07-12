@@ -3,47 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="MGTech | Full-stack Developer Portfolio" />
   <title>MGTech | Home</title>
-  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="./assets/favicon.ico" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="/main/styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-white">
+<body>
 
-<!-- 🟢 NAVBAR -->
-<header class="bg-green-600 sticky top-0 z-50 shadow-md">
-  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
-    <h1>
-      <a href="index.html" class="logo-glow">MGTech</a>
-    </h1>
-
-    <div class="flex items-center space-x-4">
-      <button id="theme-toggle" class="text-white text-xl" aria-label="Toggle theme">🌓</button>
-      <button id="menu-btn" class="text-white text-3xl focus:outline-none" aria-label="Toggle menu">&#9776;</button>
+<header>
+  <nav>
+    <a href="index.html" class="logo-glow" data-text="MGTECH">MGTech</a>
+    <div class="burger" id="menu-btn" aria-label="Toggle menu" role="button" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-
-    <div id="dropdown-menu" class="dropdown-menu hidden absolute right-6 top-full mt-2 bg-green-700 rounded-md shadow-lg w-40 text-white flex flex-col">
-      <a href="about.html" class="px-4 py-3 hover:bg-green-600 transition">About</a>
-      <a href="projects.html" class="px-4 py-3 hover:bg-green-600 transition">Projects</a>
-      <a href="contact.html" class="px-4 py-3 hover:bg-green-600 transition">Contact</a>
+    <div class="nav-links mobile-menu">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </div>
+    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
   </nav>
 </header>
 
-<!-- 🎯 HERO -->
-<section class="text-center py-20 px-6 max-w-6xl mx-auto" data-aos="fade-up">
-  <h2 class="text-5xl font-extrabold mb-4 text-green-400">Hi, I'm McGregor</h2>
-  <p class="text-xl text-gray-300 mb-6">Full-stack developer building sleek and scalable apps.</p>
-  <a href="assets/docs/MGTech-CV.pdf" class="bg-white text-green-600 px-6 py-3 font-bold rounded hover:bg-green-200 transition">Download CV</a>
-</section>
+<main>
+  <section data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+    <h2 class="section-title">Hi, I'm McGregor</h2>
+    <p class="text-center mb-8">Full-stack developer building sleek and scalable apps.</p>
+    <div style="text-align:center;">
+      <a href="assets/docs/MGTech-CV.pdf" class="button" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </section>
 
-<!-- 🧠 SKILLS -->
-<section class="bg-gray-900 py-16 px-6" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-green-300 mb-10">Skills & Tools</h3>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-white">
+  <section data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400" style="margin-top: 4rem;">
+    <h3 class="section-title">Skills & Tools</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6" style="color:#bbf7d0; font-weight:600; text-align:center;">
       <div>HTML / CSS</div>
       <div>JavaScript / TypeScript</div>
       <div>React / Next.js</div>
@@ -53,76 +49,76 @@
       <div>Tailwind CSS</div>
       <div>Figma / UI Design</div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 💼 SERVICES -->
-<section class="py-16 px-6" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-green-300 mb-10">Services</h3>
+  <section data-aos="fade-left" data-aos-duration="1200" data-aos-delay="600" style="margin-top: 4rem;">
+    <h3 class="section-title">Services</h3>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-green-900 p-6 rounded-lg shadow-md">
-        <h4 class="text-xl font-bold mb-2 text-green-200">Web Development</h4>
+      <div class="card" data-aos="zoom-in" data-aos-delay="700">
+        <h4>Web Development</h4>
         <p>Custom websites built with speed, style, and scalability.</p>
       </div>
-      <div class="bg-green-900 p-6 rounded-lg shadow-md">
-        <h4 class="text-xl font-bold mb-2 text-green-200">UI/UX Design</h4>
+      <div class="card" data-aos="zoom-in" data-aos-delay="900">
+        <h4>UI/UX Design</h4>
         <p>Clean, modern interfaces that engage and convert users.</p>
       </div>
-      <div class="bg-green-900 p-6 rounded-lg shadow-md">
-        <h4 class="text-xl font-bold mb-2 text-green-200">Tech Consulting</h4>
+      <div class="card" data-aos="zoom-in" data-aos-delay="1100">
+        <h4>Tech Consulting</h4>
         <p>Solutions for scaling apps, improving performance, or launching fast.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ⭐ TESTIMONIALS -->
-<section class="bg-gray-900 py-16 px-6" data-aos="fade-up">
-  <div class="max-w-4xl mx-auto text-center">
-    <h3 class="text-3xl font-bold text-green-300 mb-10">Testimonials</h3>
-    <p class="text-lg italic text-gray-200 mb-4">"McGregor transformed our site and gave it a modern edge. Highly recommended!"</p>
-    <p class="text-sm text-green-400">— A Happy Client</p>
-  </div>
-</section>
+  <section data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800" style="margin-top: 4rem;">
+    <h3 class="section-title">Testimonials</h3>
+    <blockquote style="max-width: 600px; margin: 0 auto; font-style: italic; color:#a7f3d0;">
+      "McGregor transformed our site and gave it a modern edge. Highly recommended!"
+      <footer style="margin-top: 0.5rem; text-align:right;">— A Happy Client</footer>
+    </blockquote>
+  </section>
 
-<!-- 📈 STATS -->
-<section class="py-16 px-6 text-center" data-aos="fade-up">
-  <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-    <div>
-      <p class="text-4xl font-bold text-green-400 counter" data-target="5">0</p>
-      <p class="text-white">Years Experience</p>
+  <section data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1000" style="margin-top: 4rem;">
+    <h3 class="section-title">Stats</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8" style="text-align:center;">
+      <div>
+        <div class="counter" data-target="5">0</div>
+        <div>Years Experience</div>
+      </div>
+      <div>
+        <div class="counter" data-target="20">0</div>
+        <div>Projects</div>
+      </div>
+      <div>
+        <div class="counter" data-target="15">0</div>
+        <div>Clients</div>
+      </div>
+      <div>
+        <div class="counter" data-target="100">0</div>
+        <div>Coffee Cups ☕</div>
+      </div>
     </div>
-    <div>
-      <p class="text-4xl font-bold text-green-400 counter" data-target="20">0</p>
-      <p class="text-white">Projects</p>
-    </div>
-    <div>
-      <p class="text-4xl font-bold text-green-400 counter" data-target="15">0</p>
-      <p class="text-white">Clients</p>
-    </div>
-    <div>
-      <p class="text-4xl font-bold text-green-400 counter" data-target="100">0</p>
-      <p class="text-white">Coffee Cups ☕</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- 📨 NEWSLETTER -->
-<section class="bg-green-600 py-16 px-6 text-center" data-aos="fade-up">
-  <div class="max-w-xl mx-auto">
-    <h3 class="text-3xl font-bold text-black mb-4">Stay Updated</h3>
-    <p class="text-black mb-6">Get updates on new projects and tutorials.</p>
-    <form>
-      <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l bg-white text-black" required />
-      <button type="submit" class="px-4 py-2 bg-black text-white font-bold rounded-r hover:bg-gray-900">Subscribe</button>
+  <section data-aos="fade-up" data-aos-duration="1200" data-aos-delay="1200" style="margin-top: 4rem; background:#047857; padding:3rem 2rem; border-radius: 12px; color:#000; max-width:600px; margin-left:auto; margin-right:auto;">
+    <h3 class="section-title" style="color:#000;">Stay Updated</h3>
+    <form style="display:flex; gap:0; max-width:400px; margin:1rem auto;">
+      <input type="email" placeholder="Enter your email" required style="flex:1; padding: 0.75rem 1rem; border:none; border-radius: 8px 0 0 8px; font-size:1rem;" />
+      <button type="submit" class="button" style="border-radius: 0 8px 8px 0;">Subscribe</button>
     </form>
-  </div>
-</section>
+  </section>
+</main>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/main/script.js"></script>
+<script src="./script.js"></script>
+<script>
+  AOS.init({
+    easing: 'ease-in-out',
+    once: true,
+    duration: 1200,
+  });
+</script>
 
 </body>
 </html>
+
 
