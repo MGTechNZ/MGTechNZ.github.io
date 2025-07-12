@@ -1,20 +1,27 @@
-// Burger menu toggle
 const burger = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobile-menu');
+const mobileLinks = mobileMenu.querySelectorAll('a');
 
 burger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+  mobileMenu.classList.toggle('active');
 });
 
-// Counter animation for stats
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active'); // Close menu on link click
+  });
+});
+
+// Counter animation for stats section
 const counters = document.querySelectorAll('.counter');
+
 counters.forEach(counter => {
   const updateCount = () => {
     const target = +counter.getAttribute('data-target');
-    let count = +counter.innerText;
+    const count = +counter.innerText;
     const increment = target / 100;
 
-    if (count < target) {
+    if(count < target){
       counter.innerText = Math.ceil(count + increment);
       setTimeout(updateCount, 20);
     } else {
@@ -22,16 +29,5 @@ counters.forEach(counter => {
     }
   };
   updateCount();
-});
-
-// Smooth scroll for internal anchor links (if any)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const targetEl = document.querySelector(this.getAttribute('href'));
-    if (targetEl) {
-      targetEl.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
 });
 
