@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact McGregor James - MGTech" />
   <title>MGTech | Contact</title>
-  <meta name="description" content="Contact MGTech" />
   <link rel="icon" href="assets/favicon.ico" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white">
 
@@ -18,50 +17,46 @@
     <a href="index.html" class="logo-link">
       <img src="assets/docs/MGTechLogo.jpg.png" alt="MGTech Logo" class="logo-img" />
     </a>
-    <div id="burger" class="burger md:hidden text-white text-3xl">&#9776;</div>
     <nav>
-      <ul class="nav-links hidden md:flex space-x-6 font-semibold text-white">
-        <li><a href="index.html" class="hover:text-green-200">Home</a></li>
-        <li><a href="about.html" class="hover:text-green-200">About</a></li>
-        <li><a href="projects.html" class="hover:text-green-200">Projects</a></li>
-        <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div id="burger" class="burger">&#9776;</div>
     </nav>
   </div>
-  <div id="mobile-menu" class="mobile-menu hidden md:hidden">
-    <a href="index.html" class="hover:text-green-200">Home</a>
-    <a href="about.html" class="hover:text-green-200">About</a>
-    <a href="projects.html" class="hover:text-green-200">Projects</a>
-    <a href="contact.html" class="hover:text-green-200">Contact</a>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </div>
 </header>
 
-<main class="max-w-xl mx-auto px-6 py-20">
-  <h2 class="text-4xl font-extrabold mb-10 text-green-400 text-center" data-aos="fade-down">Contact Me</h2>
-
-  <form name="contact" method="POST" data-netlify="true" class="space-y-6" data-aos="fade-up">
-    <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-800 text-white px-4 py-2" />
-    <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-800 text-white px-4 py-2" />
-    <textarea name="message" placeholder="Your Message" rows="6" required class="w-full bg-gray-800 text-white px-4 py-2"></textarea>
-    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 py-2 font-bold">Send</button>
+<!-- CONTACT -->
+<section class="max-w-4xl mx-auto px-6 py-20" data-aos="fade-up">
+  <h2 class="text-4xl font-extrabold mb-10 text-green-400 text-center">Contact Me</h2>
+  <form class="bg-green-900 p-8 rounded-lg shadow-md" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+    <label for="name" class="block mb-2 font-semibold">Name</label>
+    <input type="text" id="name" name="name" required class="w-full mb-4 px-3 py-2 rounded" />
+    
+    <label for="email" class="block mb-2 font-semibold">Email</label>
+    <input type="email" id="email" name="email" required class="w-full mb-4 px-3 py-2 rounded" />
+    
+    <label for="message" class="block mb-2 font-semibold">Message</label>
+    <textarea id="message" name="message" rows="6" required class="w-full mb-4 px-3 py-2 rounded"></textarea>
+    
+    <button type="submit" class="bg-green-600 px-6 py-3 font-bold rounded hover:bg-green-700 transition">Send</button>
   </form>
-</main>
+</section>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 <script>
   AOS.init();
-  document.getElementById("burger").addEventListener("click", () => {
-    const menu = document.getElementById("mobile-menu");
-    menu.classList.toggle("hidden");
-    menu.classList.toggle("active");
-  });
-
-  document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.add('hidden');
-    });
-  });
 </script>
 </body>
 </html>
