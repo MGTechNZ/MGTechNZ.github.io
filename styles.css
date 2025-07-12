@@ -94,8 +94,9 @@ body {
   right: 0;
   width: 100%;
   font-weight: 600;
-  z-index: 49;
+  z-index: 9999;
   animation: slideDown 0.3s ease forwards;
+  pointer-events: auto;
 }
 
 .mobile-menu.active {
