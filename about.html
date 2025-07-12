@@ -2,49 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MGTech | About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | MGTech</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/favicon.ico" />
 </head>
 <body>
-
-  <nav class="navbar" role="navigation" aria-label="Primary Navigation">
-    <a href="index.html" class="logo-glow" aria-label="MGTech Home">MGTech</a>
-
-    <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo" onclick="location.href='index.html'">MGTech</h1>
+      <nav>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger" id="burger">&#9776;</div>
+      </nav>
     </div>
+  </header>
 
-    <div class="nav-links">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+  <section class="hero">
+    <div class="container">
+      <h2>About MGTech</h2>
+      <p>Learn more about who I am and what I do.</p>
     </div>
+  </section>
 
-    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
-  </nav>
+  <section class="services">
+    <div class="container">
+      <h3>Who I Am</h3>
+      <p>I’m a passionate full-stack developer based in New Zealand with a focus on creating modern and accessible web applications. With experience across both frontend and backend technologies, I help businesses and individuals turn their ideas into real, functioning digital products.</p>
+      <p><strong>Experience includes:</strong></p>
+      <ul>
+        <li>Frontend: HTML, CSS, JavaScript, React</li>
+        <li>Backend: Node.js, Express, MongoDB</li>
+        <li>Tools: GitHub, Vercel, Firebase</li>
+      </ul>
 
-  <main>
-    <h2 class="section-title scroll-reveal animate">About Me</h2>
-    <p class="fade-in scroll-reveal">
-      Hello! I'm McGregor, a passionate full-stack developer specializing in creating sleek, scalable web apps.
-    </p>
-    <p class="fade-in scroll-reveal" style="animation-delay: 0.2s;">
-      I have extensive experience with JavaScript, React, Node.js, and CSS, focusing on building clean and user-friendly experiences.
-    </p>
-    <p class="fade-in scroll-reveal" style="animation-delay: 0.4s;">
-      When not coding, I enjoy exploring new technologies and enhancing my design skills.
-    </p>
-  </main>
+      <h3>My Philosophy</h3>
+      <p>I believe in clear communication, clean code, and delivering results. Whether it’s a simple website or a full-scale application, I work closely with clients to ensure their goals are met efficiently and professionally.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 MGTech. Built with ❤️ in NZ.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
