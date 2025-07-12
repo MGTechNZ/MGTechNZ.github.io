@@ -4,24 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MGTech | Home</title>
-  <meta name="description" content="MGTech | Full-stack Developer Portfolio" />
-  <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.ico" />
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header>
   <nav class="navbar" role="navigation" aria-label="Primary Navigation">
-    <a href="index.html" class="logo-glow" data-text="MGTECH">MGTech</a>
+    <a href="index.html" class="logo-glow" aria-label="MGTech Home">MGTech</a>
 
-    <button id="menu-btn" class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+    <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <div id="mobile-menu" class="mobile-menu" aria-hidden="true" hidden>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
@@ -35,19 +32,17 @@
 
     <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
   </nav>
-</header>
 
-<!-- HERO SECTION -->
-<section class="text-center py-20 px-6 max-w-6xl mx-auto">
-  <h2 class="text-5xl font-extrabold mb-4" style="color:#22c55e;">Hi, I'm McGregor</h2>
-  <p class="text-xl text-gray-300 mb-6" style="color:#d1d5db;">Full-stack developer building sleek and scalable apps.</p>
-  <a href="assets/docs/MGTech-CV.pdf" class="bg-white text-green-600 px-6 py-3 font-bold rounded hover:bg-green-200 transition">Download CV</a>
-</section>
+  <main>
+    <h2 class="section-title scroll-reveal animate">Hi, I'm McGregor</h2>
+    <p class="fade-in scroll-reveal">I'm a full-stack developer focused on creating fast, modern, and beautiful websites.</p>
+    <p class="fade-in scroll-reveal" style="animation-delay: 0.2s;">I love combining technology and design to build great user experiences.</p>
+    <a href="assets/docs/MGTech-CV.pdf" class="fade-in scroll-reveal" style="display: inline-block; margin-top: 1.5rem; background-color: #22c55e; color: black; padding: 1rem 2rem; font-weight: 700; border-radius: 8px; text-decoration: none; animation-delay: 0.4s;">
+      Download CV
+    </a>
+  </main>
 
-<!-- Other sections ... (skills, services, testimonials, etc.) -->
-<!-- You can add the full content here or keep it simple for now -->
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
 
