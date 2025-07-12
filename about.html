@@ -4,31 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MGTech | About</title>
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="icon" href="./assets/favicon.ico" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta name="description" content="About McGregor James - Full-stack Developer" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+<!-- NAVBAR -->
 <header>
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Primary Navigation">
     <a href="index.html" class="logo-glow" data-text="MGTECH">MGTech</a>
 
-    <!-- Hamburger icon -->
     <button id="menu-btn" class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <!-- Mobile menu (hidden by default) -->
-    <div id="mobile-menu" class="mobile-menu" hidden>
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true" hidden>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Desktop nav (visible on wider screens) -->
     <div class="nav-links">
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -39,45 +37,28 @@
   </nav>
 </header>
 
-
-<main>
-  <section data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" style="max-width: 800px; margin: 3rem auto;">
-    <h2 class="section-title">About Me</h2>
-    <p>Hello! I'm McGregor Farley, a passionate Full-stack Developer with over 5 years of experience building dynamic web applications. I specialize in crafting modern, scalable, and user-friendly digital experiences.</p>
-    <p>My journey started with HTML and CSS, quickly evolving into mastering JavaScript frameworks like React and Node.js. I enjoy solving complex problems, optimizing performance, and creating clean, maintainable code.</p>
-    <p>Beyond coding, I love learning new tech, UI/UX design, and contributing to open-source projects. When not at the keyboard, I enjoy gaming and spending time with my dog Zion.</p>
-    <p>I'm always eager to collaborate on exciting projects and take on challenging roles that push my skills forward.</p>
-  </section>
-
-  <section data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400" style="max-width: 800px; margin: 2rem auto;">
-    <h3 class="section-title">My Skills</h3>
-    <ul style="color: #bbf7d0; font-weight: 600; list-style: disc inside;">
-      <li>HTML5, CSS3, SASS, Tailwind CSS</li>
-      <li>JavaScript (ES6+), TypeScript</li>
-      <li>React, Next.js, Redux</li>
-      <li>Node.js, Express.js, REST APIs</li>
-      <li>Databases: MongoDB, MySQL, PostgreSQL</li>
-      <li>Version Control: Git & GitHub</li>
-      <li>UI/UX Design Tools: Figma, Adobe XD</li>
-      <li>Deployment & CI/CD: Netlify, Vercel, GitHub Actions</li>
-    </ul>
-  </section>
-
-  <section data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600" style="max-width: 800px; margin: 3rem auto; text-align: center;">
-    <a href="assets/docs/MGTech-CV.pdf" class="button" target="_blank" rel="noopener">Download My CV</a>
-  </section>
+<!-- MAIN CONTENT -->
+<main class="max-w-5xl mx-auto px-6 py-20" style="color:#d1d5db;">
+  <h2 class="text-4xl font-bold mb-12 text-green-400 text-center">About Me</h2>
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-lg leading-relaxed mb-6">
+        Hi, I'm <strong>McGregor James</strong>, a passionate full-stack developer focused on building performant, scalable, and visually striking web applications.
+      </p>
+      <p class="text-lg leading-relaxed mb-6">
+        With over 5 years experience in frontend and backend development, I’m proficient in React, Node.js, MongoDB, Tailwind CSS, and more. I strive to merge clean code with elegant user experience.
+      </p>
+      <p class="text-lg leading-relaxed">
+        Outside coding, I enjoy exploring new tech trends and improving my skills constantly. Let’s build something awesome together!
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <img src="https://via.placeholder.com/400x350?text=McGregor+James" alt="McGregor James" class="rounded-lg shadow-lg" />
+    </div>
+  </div>
 </main>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="./script.js"></script>
-<script>
-  AOS.init({
-    easing: 'ease-in-out',
-    once: true,
-    duration: 1200,
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
-
 
