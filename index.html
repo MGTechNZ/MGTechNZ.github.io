@@ -2,106 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MGTech | McGregor James Portfolio</title>
-  <meta name="description" content="Portfolio of McGregor James - Full-stack Developer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MGTech | Full-stack Development Solutions" />
+  <title>MGTech | Home</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-  <!-- ✅ NAVIGATION -->
-  <nav class="navbar">
-    <a href="index.html" class="logo-glow">MGTech</a>
-    <button class="burger" id="burger" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="nav-links" id="nav-menu">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
-  </nav>
-
-  <!-- ✨ HERO -->
-  <header class="hero scroll-reveal">
-    <div class="hero-content">
-      <h1 class="intro-title animate-typing">Hi, I’m McGregor James</h1>
-      <p class="intro-subtitle">A creative and detail-driven full-stack developer focused on building clean, responsive, and high-performance web applications.</p>
-      <a href="assets/docs/MGTech-CV.pdf" class="btn-primary">Download My CV</a>
-    </div>
-    <div class="hero-image">
-      <!-- [IMAGE PLACEHOLDER] -->
-      <img src="assets/hero-image.jpg" alt="Hero Visual" />
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <h1 class="logo">MGTech</h1>
+      <button class="burger" id="menu-btn">&#9776;</button>
+      <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- 💼 ABOUT ME SECTION -->
-  <section class="about scroll-reveal">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-grid">
-      <div>
-        <p>I’m <strong>McGregor James</strong>, a full-stack developer with a passion for building engaging and functional digital products. I specialize in crafting elegant interfaces and robust backend systems using technologies like React, Node.js, MongoDB, and Tailwind CSS.</p>
-        <p>Outside coding, I enjoy working on side projects, exploring new tech trends, and walking my dog Zion 🐾.</p>
-      </div>
-      <div>
-        <!-- [IMAGE PLACEHOLDER] -->
-        <img src="assets/about-image.jpg" alt="McGregor James" />
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Your Digital Future, Built Today</h2>
+      <p>Delivering tailored web solutions for businesses and entrepreneurs.</p>
+      <a href="#contact" class="btn-primary">Let's Talk</a>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="assets/web.svg" alt="Web Dev" />
+          <h3>Web Development</h3>
+          <p>Responsive, fast, scalable websites using modern stacks.</p>
+        </div>
+        <div class="service-card">
+          <img src="assets/ui.svg" alt="UI Design" />
+          <h3>UI/UX Design</h3>
+          <p>Clean, intuitive interfaces focused on user experience.</p>
+        </div>
+        <div class="service-card">
+          <img src="assets/consult.svg" alt="Consulting" />
+          <h3>Tech Consulting</h3>
+          <p>Expert guidance for your digital infrastructure.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 🚀 PROJECTS SECTION -->
-  <section class="projects scroll-reveal">
-    <h2 class="section-title">My Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="assets/projects/portfolio.jpg" alt="Portfolio Website" />
-        <h3>Portfolio Website</h3>
-        <p>A clean and modern portfolio designed to showcase my freelance work. Built with HTML, Tailwind CSS, and JavaScript.</p>
-        <a href="#" class="btn-link">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/projects/ecommerce.jpg" alt="E-commerce Store" />
-        <h3>E-commerce Store</h3>
-        <p>A full-featured backend with product management, Stripe integration, and secure auth.</p>
-        <a href="#" class="btn-link">View Project</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/projects/blog.jpg" alt="Blog CMS" />
-        <h3>Blog CMS</h3>
-        <p>Markdown-powered blog with content uploads, user login, and dashboard features.</p>
-        <a href="#" class="btn-link">View Project</a>
-      </div>
+  <!-- STATS SECTION -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div><span class="counter" data-target="20">0</span><p>Projects</p></div>
+      <div><span class="counter" data-target="10">0</span><p>Clients</p></div>
+      <div><span class="counter" data-target="5">0</span><p>Years Exp</p></div>
     </div>
   </section>
 
-  <!-- 📬 CONTACT SECTION -->
-  <section class="contact scroll-reveal">
-    <h2 class="section-title">Let’s Work Together</h2>
-    <p class="contact-intro">Whether you're looking for a website, design help, or a development partner — I’m ready to collaborate. Use the form below or email me at <strong>mgtechnz@gmail.com</strong>.</p>
-    <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" name="name" required />
-
-      <label for="email">Email</label>
-      <input type="email" name="_replyto" required />
-
-      <label for="message">Message</label>
-      <textarea name="message" rows="6" required></textarea>
-
-      <button type="submit" class="btn-primary">Send Message</button>
-    </form>
+  <!-- FEATURED PROJECTS PREVIEW -->
+  <section class="projects-preview">
+    <div class="container">
+      <h2 class="section-title">Featured Work</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="assets/projects/portfolio.jpg" alt="Portfolio" />
+          <h3>Portfolio Site</h3>
+          <p>Personal brand built with HTML, Tailwind, JS.</p>
+        </div>
+        <div class="project-card">
+          <img src="assets/projects/dashboard.jpg" alt="Dashboard" />
+          <h3>Admin Dashboard</h3>
+          <p>Secure admin interface using React and Express.</p>
+        </div>
+      </div>
+      <a href="projects.html" class="btn-secondary">See All Projects</a>
+    </div>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 MGTech | All rights reserved.</p>
+  <!-- CONTACT CTA -->
+  <section class="contact-cta" id="contact">
+    <div class="container">
+      <h2>Let's work together</h2>
+      <p>Email me at <a href="mailto:hello@mgtech.dev">hello@mgtech.dev</a></p>
+      <a href="contact.html" class="btn-primary">Send a Message</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 MGTech. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
+
