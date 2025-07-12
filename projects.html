@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="MGTech | Projects" />
   <title>MGTech | Projects</title>
+  <meta name="description" content="McGregor James' Projects" />
   <link rel="icon" href="assets/favicon.ico" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white">
 
 <!-- NAVBAR -->
-<header class="navbar sticky top-0 z-50 shadow-md">
-  <div class="container flex justify-between items-center px-6 py-4 bg-green-600">
+<header class="navbar">
+  <div class="container flex justify-between items-center px-6 py-4 bg-green-600 sticky top-0 z-50 shadow-md">
     <a href="index.html" class="logo-link">
       <img src="assets/docs/MGTechLogo.jpg.png" alt="MGTech Logo" class="logo-img" />
     </a>
@@ -29,7 +29,7 @@
     </nav>
   </div>
 
-  <div id="mobile-menu" class="mobile-menu hidden bg-green-700 text-white text-lg flex flex-col px-6 py-4 space-y-4">
+  <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-green-700 text-white text-lg flex flex-col px-6 py-4 space-y-4">
     <a href="index.html" class="hover:text-green-200">Home</a>
     <a href="about.html" class="hover:text-green-200">About</a>
     <a href="projects.html" class="hover:text-green-200">Projects</a>
@@ -37,40 +37,27 @@
   </div>
 </header>
 
-<!-- PROJECTS CONTENT -->
-<main class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-4xl font-extrabold mb-12 text-green-400 text-center" data-aos="fade-down">Projects</h2>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-    <!-- Project Card -->
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer" data-aos="fade-up">
-      <img src="https://via.placeholder.com/400x250?text=Task+Manager+App" alt="Task Manager App" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">Task Manager App</h3>
-      <p class="text-gray-300">A React & Node.js app with deadlines, user authentication, and real-time updates.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
+<!-- MAIN -->
+<main class="max-w-6xl mx-auto px-6 py-20" data-aos="fade-up">
+  <h2 class="text-4xl font-extrabold mb-10 text-green-400 text-center">My Projects</h2>
+  
+  <div class="grid md:grid-cols-3 gap-10">
+    <div class="bg-green-900 rounded-lg p-6 shadow-md hover:shadow-green-500 transition-shadow cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="text-2xl font-semibold mb-2 text-green-200">NextGenBuilds</h3>
+      <p>A custom PC building and tech support service website for clients seeking tailored solutions.</p>
+      <a href="#" class="text-green-400 hover:underline mt-3 inline-block">View Project</a>
     </div>
 
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-      <img src="https://via.placeholder.com/400x250?text=Portfolio+Website" alt="Portfolio Website" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">Portfolio Website</h3>
-      <p class="text-gray-300">Built with Tailwind CSS and deployed via GitHub Pages.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
+    <div class="bg-green-900 rounded-lg p-6 shadow-md hover:shadow-green-500 transition-shadow cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-2xl font-semibold mb-2 text-green-200">Low Rider Cartel</h3>
+      <p>A vibrant community site focused on lowrider culture with interactive media galleries.</p>
+      <a href="#" class="text-green-400 hover:underline mt-3 inline-block">View Project</a>
     </div>
 
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-      <img src="https://via.placeholder.com/400x250?text=E-Commerce+Backend" alt="E-Commerce Backend" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">E-Commerce Backend</h3>
-      <p class="text-gray-300">REST API with Express, JWT authentication, and Stripe payment integration.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
+    <div class="bg-green-900 rounded-lg p-6 shadow-md hover:shadow-green-500 transition-shadow cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+      <h3 class="text-2xl font-semibold mb-2 text-green-200">MGTech Portfolio</h3>
+      <p>This very portfolio website showcasing my skills and services with animations and modern UI.</p>
+      <a href="#" class="text-green-400 hover:underline mt-3 inline-block">View Project</a>
     </div>
   </div>
 </main>
@@ -80,20 +67,8 @@
 <script>
   AOS.init();
 </script>
-
-<script>
-  // Mobile menu toggle script
-  const burger = document.getElementById('burger');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  burger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
 </body>
 </html>
-
 
 
 
