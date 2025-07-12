@@ -1,56 +1,53 @@
-/* Logo glow */
+/* styles.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Glowing Logo */
 .logo-glow {
   font-weight: 900;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  color: #00ff00;
+  letter-spacing: -1px;
+  color: black;
   text-shadow:
     0 0 5px #00ff00,
     0 0 10px #00ff00,
     0 0 20px #00ff00,
-    0 0 30px #00ff00,
     0 0 40px #00ff00;
-  letter-spacing: 0.1em;
-  user-select: none;
+  transition: transform 0.3s ease;
+  text-transform: uppercase;
 }
 
-/* Dropdown menu base styles */
+.logo-glow:hover {
+  transform: scale(1.05);
+}
+
+/* Dropdown Navigation */
 .dropdown-menu {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
-  flex-direction: column;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-menu.show {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
 
-/* Scrollbar for dropdown menu if needed */
-.dropdown-menu {
-  max-height: 200px;
-  overflow-y: auto;
+.dropdown-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  transition: background 0.3s;
 }
 
-/* Scrollbar styling for modern browsers */
-.dropdown-menu::-webkit-scrollbar {
-  width: 6px;
-}
-
-.dropdown-menu::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 255, 0, 0.6);
-  border-radius: 3px;
-}
-
-/* Theme toggle button style */
-#theme-toggle {
-  cursor: pointer;
-}
-
-/* Counter animation helper */
-.counter {
-  transition: all 0.5s ease-in-out;
+.dropdown-link:hover {
+  background-color: #047857;
 }
