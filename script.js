@@ -1,53 +1,60 @@
-// Theme toggle (dark/light)
+// script.js
+
+// Mobile menu toggle
+const burger = document.getElementById('menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+burger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
+  burger.classList.toggle('active');
+});
+
+// Theme toggle with persistence
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
+// Load theme from localStorage
+if(localStorage.getItem('mgtech-theme') === 'dark') {
+  body.classList.add('dark-mode');
+}
+
 themeToggle.addEventListener('click', () => {
-  if (body.classList.contains('bg-black')) {
-    // Switch to light mode
-    body.classList.remove('bg-black', 'text-white');
-    body.classList.add('bg-white', 'text-black');
+  body.classList.toggle('dark-mode');
+  if(body.classList.contains('dark-mode')){
+    localStorage.setItem('mgtech-theme', 'dark');
   } else {
-    // Switch to dark mode
-    body.classList.remove('bg-white', 'text-black');
-    body.classList.add('bg-black', 'text-white');
+    localStorage.removeItem('mgtech-theme');
   }
 });
 
-// Dropdown menu toggle
-const menuBtn = document.getElementById('menu-btn');
-const dropdownMenu = document.getElementById('dropdown-menu');
-
-menuBtn.addEventListener('click', () => {
-  dropdownMenu.classList.toggle('show');
-});
-
-// Close dropdown if clicking outside
-document.addEventListener('click', (e) => {
-  if (!menuBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-    dropdownMenu.classList.remove('show');
-  }
-});
-
-// AOS init
-AOS.init();
-
-// Counter animation (optional)
+// Animated counters
 const counters = document.querySelectorAll('.counter');
 counters.forEach(counter => {
-  const updateCount = () => {
+  const animate = () => {
     const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-
-    const increment = target / 200; // adjust speed
-
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 10);
-    } else {
-      counter.innerText = target;
-    }
+    let count = 0;
+    const increment = target / 150;
+    const update = () => {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
   };
 
-  updateCount();
+  // Trigger animation only when in viewport
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        animate();
+        observer.unobserve(counter);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  observer.observe(counter);
 });
+
