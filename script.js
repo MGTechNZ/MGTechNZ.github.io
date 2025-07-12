@@ -1,80 +1,27 @@
-// script.js
+// Mobile nav toggle
+const burger = document.getElementById('burger');
+const navMenu = document.getElementById('nav-menu');
 
-// DOM Elements
-const burger = document.querySelector('.burger');
-const mobileMenu = document.querySelector('.mobile-menu');
+burger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Theme toggle
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Hamburger toggle
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
-  mobileMenu.classList.toggle('show');
-});
-
-// Close mobile menu when clicking a link
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    burger.classList.remove('active');
-    mobileMenu.classList.remove('show');
-  });
-});
-
-// Theme toggle with localStorage
-function setTheme(theme) {
-  if(theme === 'dark') {
-    body.classList.add('dark');
-    themeToggle.textContent = '☀️';
-  } else {
-    body.classList.remove('dark');
-    themeToggle.textContent = '🌓';
-  }
-  localStorage.setItem('theme', theme);
-}
-
 themeToggle.addEventListener('click', () => {
-  if(body.classList.contains('dark')) {
-    setTheme('light');
-  } else {
-    setTheme('dark');
-  }
+  body.classList.toggle('dark-mode');
 });
 
-// Load saved theme or default to light
-document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  setTheme(savedTheme);
-});
-
-// Scroll reveal for sections
-const scrollElements = document.querySelectorAll('.scroll-reveal');
-
-function elementInView(el, dividend = 1) {
-  const elementTop = el.getBoundingClientRect().top;
-  return (
-    elementTop <=
-    (window.innerHeight || document.documentElement.clientHeight) / dividend
-  );
-}
-
-function displayScrollElement(el) {
-  el.classList.add('visible');
-}
-
-function hideScrollElement(el) {
-  el.classList.remove('visible');
-}
-
-function handleScrollAnimation() {
-  scrollElements.forEach(el => {
-    if (elementInView(el, 1.25)) {
-      displayScrollElement(el);
-    } else {
-      hideScrollElement(el);
+// Scroll animations
+const reveals = document.querySelectorAll('.scroll-reveal');
+window.addEventListener('scroll', () => {
+  reveals.forEach(section => {
+    const windowHeight = window.innerHeight;
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < windowHeight - 100) {
+      section.classList.add('reveal-active');
     }
   });
-}
-
-window.addEventListener('scroll', () => {
-  handleScrollAnimation();
 });
