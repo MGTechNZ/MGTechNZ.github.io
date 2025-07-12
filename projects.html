@@ -4,24 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MGTech | Projects</title>
-  <meta name="description" content="McGregor James' Projects" />
-  <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.ico" />
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header>
   <nav class="navbar" role="navigation" aria-label="Primary Navigation">
-    <a href="index.html" class="logo-glow" data-text="MGTECH">MGTech</a>
+    <a href="index.html" class="logo-glow" aria-label="MGTech Home">MGTech</a>
 
-    <button id="menu-btn" class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+    <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <div id="mobile-menu" class="mobile-menu" aria-hidden="true" hidden>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
@@ -35,46 +32,29 @@
 
     <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
   </nav>
-</header>
 
-<!-- MAIN CONTENT -->
-<main class="max-w-7xl mx-auto px-6 py-20" style="color:#d1d5db;">
-  <h2 class="text-4xl font-extrabold mb-12 text-green-400 text-center">Projects</h2>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-    <!-- Project Card -->
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer">
-      <img src="https://via.placeholder.com/400x250?text=Task+Manager+App" alt="Task Manager App" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">Task Manager App</h3>
-      <p>A React & Node.js app with deadlines, user authentication, and real-time updates.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
+  <main>
+    <h2 class="section-title scroll-reveal animate">My Projects</h2>
+    <div class="projects-grid scroll-reveal">
+      <div class="project-card" tabindex="0" aria-label="Project 1: Portfolio Website">
+        <img src="assets/projects/portfolio.jpg" alt="Portfolio Website screenshot" />
+        <h3>Portfolio Website</h3>
+        <p>A clean and modern portfolio to showcase my skills and work.</p>
+      </div>
+      <div class="project-card" tabindex="0" aria-label="Project 2: E-commerce Store">
+        <img src="assets/projects/ecommerce.jpg" alt="E-commerce Store screenshot" />
+        <h3>E-commerce Store</h3>
+        <p>Fully functional online store with payment integration.</p>
+      </div>
+      <div class="project-card" tabindex="0" aria-label="Project 3: Blog Platform">
+        <img src="assets/projects/blog.jpg" alt="Blog Platform screenshot" />
+        <h3>Blog Platform</h3>
+        <p>Custom CMS and blog platform for content creators.</p>
       </div>
     </div>
+  </main>
 
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer">
-      <img src="https://via.placeholder.com/400x250?text=Portfolio+Website" alt="Portfolio Website" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">Portfolio Website</h3>
-      <p>Built with Tailwind CSS and deployed via GitHub Pages.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
-    </div>
-
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform cursor-pointer">
-      <img src="https://via.placeholder.com/400x250?text=E-Commerce+Backend" alt="E-Commerce Backend" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">E-Commerce Backend</h3>
-      <p>REST API with Express, JWT authentication, and Stripe payment integration.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
-    </div>
-  </div>
-</main>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
