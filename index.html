@@ -2,110 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MGTech | Full-stack Development Solutions" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MGTech | Home</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/favicon.ico" />
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- NAVBAR -->
   <header class="navbar">
-    <div class="container nav-wrapper">
-      <h1 class="logo">MGTech</h1>
-      <button class="burger" id="menu-btn">&#9776;</button>
-      <nav id="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+    <div class="container">
+      <h1 class="logo" onclick="location.href='index.html'">MGTech</h1>
+      <nav>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger" id="burger">&#9776;</div>
       </nav>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-text">
-      <h2>Your Digital Future, Built Today</h2>
-      <p>Delivering tailored web solutions for businesses and entrepreneurs.</p>
-      <a href="#contact" class="btn-primary">Let's Talk</a>
+    <div class="container">
+      <h2>Hi, I'm McGregor</h2>
+      <p>Full-stack developer building sleek and scalable applications.</p>
+      <a href="assets/docs/MGTech-CV.pdf" class="btn-primary">Download CV</a>
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
+  <section class="skills">
+    <div class="container">
+      <h3>Skills & Tools</h3>
+      <ul class="skills-list">
+        <li>HTML / CSS</li>
+        <li>JavaScript / TypeScript</li>
+        <li>React / Next.js</li>
+        <li>Node.js / Express</li>
+        <li>MongoDB / MySQL</li>
+        <li>Git / GitHub</li>
+        <li>Tailwind CSS</li>
+        <li>Figma / UI Design</li>
+      </ul>
+    </div>
+  </section>
+
   <section class="services">
     <div class="container">
-      <h2 class="section-title">Services</h2>
+      <h3>Services</h3>
       <div class="services-grid">
         <div class="service-card">
-          <img src="assets/web.svg" alt="Web Dev" />
-          <h3>Web Development</h3>
-          <p>Responsive, fast, scalable websites using modern stacks.</p>
+          <h4>Web Development</h4>
+          <p>Custom websites built with speed, style, and scalability.</p>
         </div>
         <div class="service-card">
-          <img src="assets/ui.svg" alt="UI Design" />
-          <h3>UI/UX Design</h3>
-          <p>Clean, intuitive interfaces focused on user experience.</p>
+          <h4>UI/UX Design</h4>
+          <p>Clean, modern interfaces that engage and convert users.</p>
         </div>
         <div class="service-card">
-          <img src="assets/consult.svg" alt="Consulting" />
-          <h3>Tech Consulting</h3>
-          <p>Expert guidance for your digital infrastructure.</p>
+          <h4>Tech Consulting</h4>
+          <p>Solutions for scaling apps, improving performance, or launching fast.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS SECTION -->
+  <section class="testimonials">
+    <div class="container">
+      <h3>Testimonials</h3>
+      <blockquote>
+        “McGregor transformed our site and gave it a modern edge. Highly recommended!”
+      </blockquote>
+      <cite>— A Happy Client</cite>
+    </div>
+  </section>
+
   <section class="stats">
     <div class="container stats-grid">
-      <div><span class="counter" data-target="20">0</span><p>Projects</p></div>
-      <div><span class="counter" data-target="10">0</span><p>Clients</p></div>
-      <div><span class="counter" data-target="5">0</span><p>Years Exp</p></div>
-    </div>
-  </section>
-
-  <!-- FEATURED PROJECTS PREVIEW -->
-  <section class="projects-preview">
-    <div class="container">
-      <h2 class="section-title">Featured Work</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="assets/projects/portfolio.jpg" alt="Portfolio" />
-          <h3>Portfolio Site</h3>
-          <p>Personal brand built with HTML, Tailwind, JS.</p>
-        </div>
-        <div class="project-card">
-          <img src="assets/projects/dashboard.jpg" alt="Dashboard" />
-          <h3>Admin Dashboard</h3>
-          <p>Secure admin interface using React and Express.</p>
-        </div>
+      <div>
+        <p class="stat-number" data-target="5">0</p>
+        <p>Years Experience</p>
       </div>
-      <a href="projects.html" class="btn-secondary">See All Projects</a>
+      <div>
+        <p class="stat-number" data-target="20">0</p>
+        <p>Projects</p>
+      </div>
+      <div>
+        <p class="stat-number" data-target="15">0</p>
+        <p>Clients</p>
+      </div>
+      <div>
+        <p class="stat-number" data-target="100">0</p>
+        <p>Coffee Cups ☕</p>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
-  <section class="contact-cta" id="contact">
-    <div class="container">
-      <h2>Let's work together</h2>
-      <p>Email me at <a href="mailto:hello@mgtech.dev">hello@mgtech.dev</a></p>
-      <a href="contact.html" class="btn-primary">Send a Message</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <div class="container footer-content">
-      <p>&copy; 2025 MGTech. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <div class="container">
+      <p>© 2025 MGTech. Built with ❤️ in NZ.</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
