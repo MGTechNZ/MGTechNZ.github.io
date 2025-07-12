@@ -1,27 +1,22 @@
-// Mobile nav toggle
-const burger = document.getElementById('burger');
-const navMenu = document.getElementById('nav-menu');
-
-burger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
+// Mobile menu toggle
+document.getElementById('burger').addEventListener('click', () => {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('show');
 });
 
-// Theme toggle
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-themeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-});
-
-// Scroll animations
-const reveals = document.querySelectorAll('.scroll-reveal');
-window.addEventListener('scroll', () => {
-  reveals.forEach(section => {
-    const windowHeight = window.innerHeight;
-    const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop < windowHeight - 100) {
-      section.classList.add('reveal-active');
+// Animated counters
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText;
+    const increment = target / 50;
+    if (current < target) {
+      counter.innerText = Math.ceil(current + increment);
+      setTimeout(updateCount, 20);
+    } else {
+      counter.innerText = target;
     }
-  });
+  };
+  updateCount();
 });
