@@ -3,57 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MGTech | Projects</title>
+  <title>Projects | MGTech</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <nav class="navbar" role="navigation" aria-label="Primary Navigation">
-    <a href="index.html" class="logo-glow" aria-label="MGTech Home">MGTech</a>
-
-    <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span>
-      <span></span>
-      <span></span>
+  <nav class="navbar">
+    <a href="index.html" class="logo-glow">MGTech</a>
+    <button class="burger" id="burger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
     </button>
-
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="nav-links" id="nav-menu">
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </div>
-
-    <div class="nav-links">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
     <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
   </nav>
 
-  <main>
-    <h2 class="section-title scroll-reveal animate">My Projects</h2>
-    <div class="projects-grid scroll-reveal">
-      <div class="project-card" tabindex="0" aria-label="Project 1: Portfolio Website">
-        <img src="assets/projects/portfolio.jpg" alt="Portfolio Website screenshot" />
+  <main class="projects scroll-reveal">
+    <h2 class="section-title">Highlighted Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="assets/projects/portfolio.jpg" alt="Portfolio Website" />
         <h3>Portfolio Website</h3>
-        <p>A clean and modern portfolio to showcase my skills and work.</p>
+        <p>This portfolio site you’re viewing was designed to showcase my full-stack capabilities and design eye. It’s hosted on GitHub Pages and built with HTML, Tailwind CSS, and JS.</p>
+        <a href="#" class="btn-link">Live Demo</a>
       </div>
-      <div class="project-card" tabindex="0" aria-label="Project 2: E-commerce Store">
-        <img src="assets/projects/ecommerce.jpg" alt="E-commerce Store screenshot" />
-        <h3>E-commerce Store</h3>
-        <p>Fully functional online store with payment integration.</p>
+
+      <div class="project-card">
+        <img src="assets/projects/dashboard.jpg" alt="Admin Dashboard" />
+        <h3>Admin Dashboard</h3>
+        <p>Built using React and Chart.js, this dashboard manages real-time analytics, user data, and dynamic reporting tools with full authentication and secure routing.</p>
+        <a href="#" class="btn-link">Live Demo</a>
       </div>
-      <div class="project-card" tabindex="0" aria-label="Project 3: Blog Platform">
-        <img src="assets/projects/blog.jpg" alt="Blog Platform screenshot" />
-        <h3>Blog Platform</h3>
-        <p>Custom CMS and blog platform for content creators.</p>
+
+      <div class="project-card">
+        <img src="assets/projects/api.jpg" alt="REST API" />
+        <h3>RESTful API</h3>
+        <p>Scalable backend API for a shopping platform. Features include secure login, CRUD products, search filtering, and payment processing using Stripe.</p>
+        <a href="#" class="btn-link">GitHub Repo</a>
       </div>
     </div>
   </main>
 
+  <footer class="footer">
+    <p>&copy; 2025 MGTech | All rights reserved.</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
