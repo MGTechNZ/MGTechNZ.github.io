@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="McGregor James' Projects" />
   <title>MGTech | Projects</title>
-  <meta name="description" content="Portfolio Projects" />
   <link rel="icon" href="assets/favicon.ico" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white">
 
@@ -18,60 +17,28 @@
     <a href="index.html" class="logo-link">
       <img src="assets/docs/MGTechLogo.jpg.png" alt="MGTech Logo" class="logo-img" />
     </a>
-    <div id="burger" class="burger md:hidden text-white text-3xl">&#9776;</div>
     <nav>
-      <ul class="nav-links hidden md:flex space-x-6 font-semibold text-white">
-        <li><a href="index.html" class="hover:text-green-200">Home</a></li>
-        <li><a href="about.html" class="hover:text-green-200">About</a></li>
-        <li><a href="projects.html" class="hover:text-green-200">Projects</a></li>
-        <li><a href="contact.html" class="hover:text-green-200">Contact</a></li>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div id="burger" class="burger">&#9776;</div>
     </nav>
   </div>
-  <div id="mobile-menu" class="mobile-menu hidden md:hidden">
-    <a href="index.html" class="hover:text-green-200">Home</a>
-    <a href="about.html" class="hover:text-green-200">About</a>
-    <a href="projects.html" class="hover:text-green-200">Projects</a>
-    <a href="contact.html" class="hover:text-green-200">Contact</a>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </div>
 </header>
 
-<main class="max-w-6xl mx-auto px-6 py-20">
-  <h2 class="text-4xl font-extrabold mb-12 text-green-400 text-center" data-aos="fade-down">Projects</h2>
+<!-- MAIN -->
+<main class="max-w
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-    <!-- Example Project -->
-    <div class="bg-green-900 rounded-lg shadow-md p-6 hover:scale-[1.02] transition-transform" data-aos="fade-up">
-      <img src="https://via.placeholder.com/400x250?text=Project+Image" alt="Project Image" class="rounded-md mb-4" />
-      <h3 class="text-xl font-semibold text-green-200 mb-2">Awesome Project</h3>
-      <p class="text-gray-300">Full-stack application built with React, Express, and MongoDB.</p>
-      <div class="mt-4 flex space-x-4">
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">GitHub</a>
-        <a href="#" class="text-green-400 hover:text-green-200 font-semibold">Live Demo</a>
-      </div>
-    </div>
 
-    <!-- Duplicate for more projects -->
-  </div>
-</main>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="script.js"></script>
-<script>
-  AOS.init();
-  document.getElementById("burger").addEventListener("click", () => {
-    const menu = document.getElementById("mobile-menu");
-    menu.classList.toggle("hidden");
-    menu.classList.toggle("active");
-  });
-
-  document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.add('hidden');
-    });
-  });
-</script>
-</body>
-</html>
 
 
