@@ -6,52 +6,67 @@
   <title>Projects | MGTech</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html" class="logo-glow">MGTech</a>
-    <button class="burger" id="burger" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-links" id="nav-menu">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo" onclick="location.href='index.html'">MGTech</h1>
+      <nav>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger" id="burger">&#9776;</div>
+      </nav>
     </div>
-    <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
-  </nav>
+  </header>
 
-  <main class="projects scroll-reveal">
-    <h2 class="section-title">Highlighted Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="assets/projects/portfolio.jpg" alt="Portfolio Website" />
-        <h3>Portfolio Website</h3>
-        <p>This portfolio site you’re viewing was designed to showcase my full-stack capabilities and design eye. It’s hosted on GitHub Pages and built with HTML, Tailwind CSS, and JS.</p>
-        <a href="#" class="btn-link">Live Demo</a>
-      </div>
+  <section class="hero">
+    <div class="container">
+      <h2>Projects</h2>
+      <p>A showcase of recent work and ongoing projects.</p>
+    </div>
+  </section>
 
-      <div class="project-card">
-        <img src="assets/projects/dashboard.jpg" alt="Admin Dashboard" />
-        <h3>Admin Dashboard</h3>
-        <p>Built using React and Chart.js, this dashboard manages real-time analytics, user data, and dynamic reporting tools with full authentication and secure routing.</p>
-        <a href="#" class="btn-link">Live Demo</a>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/projects/api.jpg" alt="REST API" />
-        <h3>RESTful API</h3>
-        <p>Scalable backend API for a shopping platform. Features include secure login, CRUD products, search filtering, and payment processing using Stripe.</p>
-        <a href="#" class="btn-link">GitHub Repo</a>
+  <section class="projects container">
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x250?text=Task+Manager+App" alt="Task Manager App" />
+      <h3>Task Manager App</h3>
+      <p>A React & Node.js app with deadlines, user authentication, and real-time updates.</p>
+      <div class="project-links">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">Live Demo</a>
       </div>
     </div>
-  </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 MGTech | All rights reserved.</p>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x250?text=Portfolio+Website" alt="Portfolio Website" />
+      <h3>Portfolio Website</h3>
+      <p>Built with Tailwind CSS and deployed via GitHub Pages.</p>
+      <div class="project-links">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">Live Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x250?text=E-Commerce+Backend" alt="E-Commerce Backend" />
+      <h3>E-Commerce Backend</h3>
+      <p>REST API with Express, JWT authentication, and Stripe payment integration.</p>
+      <div class="project-links">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 MGTech. Built with ❤️ in NZ.</p>
+    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
-
